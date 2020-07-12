@@ -1,0 +1,54 @@
+{
+  "Id": "__default_policy_haha_ID",
+  "Statement": [
+    {
+      "Action": [
+        "SNS:GetTopicAttributes",
+        "SNS:SetTopicAttributes",
+        "SNS:AddPermission",
+        "SNS:RemovePermission",
+        "SNS:DeleteTopic",
+        "SNS:Subscribe",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:Publish",
+        "SNS:Receive"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "5XXXXXXXXX1"
+        }
+      },
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Resource": "arn:aws:sns:us-east-1:5XXXXXXXXX1:dynamodb",
+      "Sid": "__default_statement_ID-222"
+    },
+    {
+      "Action": [
+        "SNS:GetTopicAttributes1",
+        "SNS:SetTopicAttributes1",
+        "SNS:AddPermission1",
+        "SNS:RemovePermission1",
+        "SNS:DeleteTopic1",
+        "SNS:Subscribe1",
+        "SNS:ListSubscriptionsByTopic1",
+        "SNS:Publish1",
+        "SNS:Receive1"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "5XXXXXXXX2"
+        }
+      },
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Resource": "arn:aws:sns:us-east-1:5XXXXXXXXX2:dynamodb1",
+      "Sid": "__default_statement_ID-714"
+    }
+  ],
+  "Version": "2008-10-17"
+}

@@ -46,7 +46,7 @@ def getNewMergedPolicy():
             "Statement": getmergedstatement(filelist)
         }
         with open(output,"w") as pf:
-            pf.write(json.dumps(policy))
+            pf.write(json.dumps(policy,indent=2, sort_keys=True))
             pf.close()
     else:
         print("we filelist is empty")
