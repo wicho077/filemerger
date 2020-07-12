@@ -1,0 +1,30 @@
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:GetTopicAttributes1",
+        "SNS:SetTopicAttributes1",
+        "SNS:AddPermission1",
+        "SNS:RemovePermission1",
+        "SNS:DeleteTopic1",
+        "SNS:Subscribe1",
+        "SNS:ListSubscriptionsByTopic1",
+        "SNS:Publish1",
+        "SNS:Receive1"
+      ],
+      "Resource": "arn:aws:sns:us-east-1:5XXXXXXXXX2:dynamodb1",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "5XXXXXXXX2"
+        }
+      }
+    }
+  ]
+}
